@@ -1,79 +1,80 @@
 [
   {
-    "id": "chest_small",
-    "name": "小宝箱",
+    "id": "normal_ches",
+    "name": "普通宝箱池",
+    "itemTypePowerList": [
+      1,
+      1
+    ],
+    "qualityPowerList": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
     "bannerItemList": [
       {
-        "power": 1,
+        "power": 10,
+        "itemId": "weapon1",
         "itemType": 0,
-        "qualityPowerList": [
-          2,
-          3,
-          4,
-          5
-        ]
+        "quality": 0
       },
       {
-        "power": 1,
-        "itemType": 1,
-        "qualityPowerList": [
-          2,
-          3,
-          4,
-          5
-        ]
+        "power": 10,
+        "itemId": "weapon2",
+        "itemType": 0,
+        "quality": 0
+      },
+      {
+        "power": 10,
+        "itemId": "weapon3",
+        "itemType": 0,
+        "quality": 1
+      },
+      {
+        "power": 10,
+        "itemId": "weapon4",
+        "itemType": 0,
+        "quality": 1
+      },
+      {
+        "power": 10,
+        "itemId": "weapon5",
+        "itemType": 0,
+        "quality": 2
+      },
+      {
+        "power": 10,
+        "itemId": "weapon6",
+        "itemType": 0,
+        "quality": 2
+      },
+      {
+        "power": 10,
+        "itemId": "weapon7",
+        "itemType": 0,
+        "quality": 3
+      },
+      {
+        "power": 10,
+        "itemId": "weapon8",
+        "itemType": 0,
+        "quality": 3
       }
     ]
   },
   {
-    "id": "chest_mid",
-    "name": "中宝箱",
+    "id": "normal_ches2",
+    "name": "",
+    "itemTypePowerList": [],
+    "qualityPowerList": [],
     "bannerItemList": [
       {
-        "power": 1,
+        "power": 10,
+        "itemId": "weapon2",
         "itemType": 0,
-        "qualityPowerList": [
-          2,
-          3,
-          4,
-          5
-        ]
-      },
-      {
-        "power": 1,
-        "itemType": 1,
-        "qualityPowerList": [
-          2,
-          3,
-          4,
-          5
-        ]
-      }
-    ]
-  },
-  {
-    "id": "chest_big",
-    "name": "大宝箱",
-    "bannerItemList": [
-      {
-        "power": 1,
-        "itemType": 0,
-        "qualityPowerList": [
-          2,
-          3,
-          4,
-          5
-        ]
-      },
-      {
-        "power": 1,
-        "itemType": 1,
-        "qualityPowerList": [
-          2,
-          3,
-          4,
-          5
-        ]
+        "quality": 0
       }
     ]
   }

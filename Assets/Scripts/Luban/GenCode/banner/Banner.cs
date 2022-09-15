@@ -20,14 +20,18 @@ public sealed partial class Banner :  Bright.Config.BeanBase
     {
         { if(!_json["id"].IsString) { throw new SerializationException(); }  Id = _json["id"]; }
         { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
+        { var _json1 = _json["itemTypePowerList"]; if(!_json1.IsArray) { throw new SerializationException(); } ItemTypePowerList = new System.Collections.Generic.List<int>(_json1.Count); foreach(JSONNode __e in _json1.Children) { int __v;  { if(!__e.IsNumber) { throw new SerializationException(); }  __v = __e; }  ItemTypePowerList.Add(__v); }   }
+        { var _json1 = _json["qualityPowerList"]; if(!_json1.IsArray) { throw new SerializationException(); } QualityPowerList = new System.Collections.Generic.List<int>(_json1.Count); foreach(JSONNode __e in _json1.Children) { int __v;  { if(!__e.IsNumber) { throw new SerializationException(); }  __v = __e; }  QualityPowerList.Add(__v); }   }
         { var _json1 = _json["bannerItemList"]; if(!_json1.IsArray) { throw new SerializationException(); } BannerItemList = new System.Collections.Generic.List<banner.MainBannerItem>(_json1.Count); foreach(JSONNode __e in _json1.Children) { banner.MainBannerItem __v;  { if(!__e.IsObject) { throw new SerializationException(); }  __v = banner.MainBannerItem.DeserializeMainBannerItem(__e); }  BannerItemList.Add(__v); }   }
         PostInit();
     }
 
-    public Banner(string id, string name, System.Collections.Generic.List<banner.MainBannerItem> bannerItemList ) 
+    public Banner(string id, string name, System.Collections.Generic.List<int> itemTypePowerList, System.Collections.Generic.List<int> qualityPowerList, System.Collections.Generic.List<banner.MainBannerItem> bannerItemList ) 
     {
         this.Id = id;
         this.Name = name;
+        this.ItemTypePowerList = itemTypePowerList;
+        this.QualityPowerList = qualityPowerList;
         this.BannerItemList = bannerItemList;
         PostInit();
     }
@@ -39,6 +43,8 @@ public sealed partial class Banner :  Bright.Config.BeanBase
 
     public string Id { get; private set; }
     public string Name { get; private set; }
+    public System.Collections.Generic.List<int> ItemTypePowerList { get; private set; }
+    public System.Collections.Generic.List<int> QualityPowerList { get; private set; }
     public System.Collections.Generic.List<banner.MainBannerItem> BannerItemList { get; private set; }
 
     public const int __ID__ = -484808626;
@@ -60,6 +66,8 @@ public sealed partial class Banner :  Bright.Config.BeanBase
         return "{ "
         + "Id:" + Id + ","
         + "Name:" + Name + ","
+        + "ItemTypePowerList:" + Bright.Common.StringUtil.CollectionToString(ItemTypePowerList) + ","
+        + "QualityPowerList:" + Bright.Common.StringUtil.CollectionToString(QualityPowerList) + ","
         + "BannerItemList:" + Bright.Common.StringUtil.CollectionToString(BannerItemList) + ","
         + "}";
     }

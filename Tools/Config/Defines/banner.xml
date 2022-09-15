@@ -12,20 +12,34 @@
 		<var name="Material" alias="材料" value="1"/>
 	</enum>
 
-	<!--单个卡池 bannerItemList 分类池(如武器,材料)-->
-	<bean name="Banner">
-		<var name="id" type="string"/>
-		<var name="name" type="string"/>
-		<var name="bannerItemList" type="list,MainBannerItem"/>
-	</bean>
 
 	<bean name="basePowerItem">
 		<var name="power" type="int"/>
 		<bean name="MainBannerItem">
+			<var name="itemId" type="string"/>
 			<var name="itemType" type="ItemType"/>
-			<var name="qualityPowerList" type="list,int"/>
+			<var name="quality" type="Quality"/>
 		</bean>
 	</bean>
 
-	<table name="TbBanner" value="Banner" input="品质概率@卡池配置.xlsx"/>
+	<!--单个卡池 bannerItemList 分类池(如武器,材料)-->
+	<bean name="Banner">
+		<var name="id" type="string"/>
+		<var name="name" type="string"/>
+		<var name="itemTypePowerList" type="list,int"/>
+		<var name="qualityPowerList" type="list,int"/>
+		<var name="bannerItemList" type="list,MainBannerItem"/>
+	</bean>
+
+	<table name="TbBanner" value="Banner" input="奖励池@卡池配置.xlsx"/>
+
+	<!--卡池库内容(常驻池等等)-->
+	<!-- <bean name="BannerContent">
+		<var name="id" type="string"/>
+		<var name="bannerId" type="string"/>
+		<var name="name" type="string"/>
+		<var name="bannerItemList" type="list,MainBannerItem"/>
+	</bean>
+	<table name="TbBannerContent" value="BannerContent" input="品质概率@卡池配置.xlsx"/> -->
+
 </module>

@@ -18,15 +18,17 @@ public sealed partial class MainBannerItem :  banner.basePowerItem
 {
     public MainBannerItem(JSONNode _json)  : base(_json) 
     {
+        { if(!_json["itemId"].IsString) { throw new SerializationException(); }  ItemId = _json["itemId"]; }
         { if(!_json["itemType"].IsNumber) { throw new SerializationException(); }  ItemType = (banner.ItemType)_json["itemType"].AsInt; }
-        { var _json1 = _json["qualityPowerList"]; if(!_json1.IsArray) { throw new SerializationException(); } QualityPowerList = new System.Collections.Generic.List<int>(_json1.Count); foreach(JSONNode __e in _json1.Children) { int __v;  { if(!__e.IsNumber) { throw new SerializationException(); }  __v = __e; }  QualityPowerList.Add(__v); }   }
+        { if(!_json["quality"].IsNumber) { throw new SerializationException(); }  Quality = (banner.Quality)_json["quality"].AsInt; }
         PostInit();
     }
 
-    public MainBannerItem(int power, banner.ItemType itemType, System.Collections.Generic.List<int> qualityPowerList )  : base(power) 
+    public MainBannerItem(int power, string itemId, banner.ItemType itemType, banner.Quality quality )  : base(power) 
     {
+        this.ItemId = itemId;
         this.ItemType = itemType;
-        this.QualityPowerList = qualityPowerList;
+        this.Quality = quality;
         PostInit();
     }
 
@@ -35,8 +37,9 @@ public sealed partial class MainBannerItem :  banner.basePowerItem
         return new banner.MainBannerItem(_json);
     }
 
+    public string ItemId { get; private set; }
     public banner.ItemType ItemType { get; private set; }
-    public System.Collections.Generic.List<int> QualityPowerList { get; private set; }
+    public banner.Quality Quality { get; private set; }
 
     public const int __ID__ = -2097713638;
     public override int GetTypeId() => __ID__;
@@ -56,8 +59,9 @@ public sealed partial class MainBannerItem :  banner.basePowerItem
     {
         return "{ "
         + "Power:" + Power + ","
+        + "ItemId:" + ItemId + ","
         + "ItemType:" + ItemType + ","
-        + "QualityPowerList:" + Bright.Common.StringUtil.CollectionToString(QualityPowerList) + ","
+        + "Quality:" + Quality + ","
         + "}";
     }
     
