@@ -1,0 +1,31 @@
+﻿<module name="banner">
+
+	<enum name="Quality">
+		<var name="White" alias="白" value="0"/>
+		<var name="Blue" alias="蓝" value="1"/>
+		<var name="Purple" alias="紫" value="2"/>
+		<var name="Glod" alias="金" value="3"/>
+	</enum>
+
+	<enum name="ItemType">
+		<var name="Weapon" alias="武器" value="0"/>
+		<var name="Material" alias="材料" value="1"/>
+	</enum>
+
+	<!--单个卡池 bannerItemList 分类池(如武器,材料)-->
+	<bean name="Banner">
+		<var name="id" type="string"/>
+		<var name="name" type="string"/>
+		<var name="bannerItemList" type="list,MainBannerItem"/>
+	</bean>
+
+	<bean name="basePowerItem">
+		<var name="power" type="int"/>
+		<bean name="MainBannerItem">
+			<var name="itemType" type="ItemType"/>
+			<var name="qualityPowerList" type="list,int"/>
+		</bean>
+	</bean>
+
+	<table name="TbBanner" value="Banner" input="品质概率@卡池配置.xlsx"/>
+</module>

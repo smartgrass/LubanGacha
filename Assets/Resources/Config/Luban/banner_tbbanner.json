@@ -1,0 +1,80 @@
+[
+  {
+    "id": "chest_small",
+    "name": "小宝箱",
+    "bannerItemList": [
+      {
+        "power": 1,
+        "itemType": 0,
+        "qualityPowerList": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "power": 1,
+        "itemType": 1,
+        "qualityPowerList": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chest_mid",
+    "name": "中宝箱",
+    "bannerItemList": [
+      {
+        "power": 1,
+        "itemType": 0,
+        "qualityPowerList": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "power": 1,
+        "itemType": 1,
+        "qualityPowerList": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chest_big",
+    "name": "大宝箱",
+    "bannerItemList": [
+      {
+        "power": 1,
+        "itemType": 0,
+        "qualityPowerList": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "power": 1,
+        "itemType": 1,
+        "qualityPowerList": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  }
+]
