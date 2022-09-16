@@ -13,7 +13,7 @@
 	</enum>
 
 
-	<bean name="basePowerItem">
+	<bean name="BasePowerItem">
 		<var name="power" type="int"/>
 		<bean name="MainBannerItem">
 			<var name="itemId" type="string"/>

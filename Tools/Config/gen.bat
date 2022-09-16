@@ -1,3 +1,4 @@
+
 set GEN_CLIENT=dotnet ..\Tools\Luban.ClientServer\Luban.ClientServer.dll
 
 %GEN_CLIENT% -j cfg --^

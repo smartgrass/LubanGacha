@@ -14,21 +14,21 @@ using SimpleJSON;
 namespace cfg.banner
 {
 
-public abstract partial class basePowerItem :  Bright.Config.BeanBase 
+public abstract partial class BasePowerItem :  Bright.Config.BeanBase 
 {
-    public basePowerItem(JSONNode _json) 
+    public BasePowerItem(JSONNode _json) 
     {
         { if(!_json["power"].IsNumber) { throw new SerializationException(); }  Power = _json["power"]; }
         PostInit();
     }
 
-    public basePowerItem(int power ) 
+    public BasePowerItem(int power ) 
     {
         this.Power = power;
         PostInit();
     }
 
-    public static basePowerItem DeserializebasePowerItem(JSONNode _json)
+    public static BasePowerItem DeserializeBasePowerItem(JSONNode _json)
     {
         string type = _json["$type"];
         switch (type)

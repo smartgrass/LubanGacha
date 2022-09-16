@@ -20,9 +20,9 @@ public sealed partial class Banner :  Bright.Config.BeanBase
     {
         { if(!_json["id"].IsString) { throw new SerializationException(); }  Id = _json["id"]; }
         { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
-        { var _json1 = _json["itemTypePowerList"]; if(!_json1.IsArray) { throw new SerializationException(); } ItemTypePowerList = new System.Collections.Generic.List<int>(_json1.Count); foreach(JSONNode __e in _json1.Children) { int __v;  { if(!__e.IsNumber) { throw new SerializationException(); }  __v = __e; }  ItemTypePowerList.Add(__v); }   }
-        { var _json1 = _json["qualityPowerList"]; if(!_json1.IsArray) { throw new SerializationException(); } QualityPowerList = new System.Collections.Generic.List<int>(_json1.Count); foreach(JSONNode __e in _json1.Children) { int __v;  { if(!__e.IsNumber) { throw new SerializationException(); }  __v = __e; }  QualityPowerList.Add(__v); }   }
-        { var _json1 = _json["bannerItemList"]; if(!_json1.IsArray) { throw new SerializationException(); } BannerItemList = new System.Collections.Generic.List<banner.MainBannerItem>(_json1.Count); foreach(JSONNode __e in _json1.Children) { banner.MainBannerItem __v;  { if(!__e.IsObject) { throw new SerializationException(); }  __v = banner.MainBannerItem.DeserializeMainBannerItem(__e); }  BannerItemList.Add(__v); }   }
+        { var __json0 = _json["itemTypePowerList"]; if(!__json0.IsArray) { throw new SerializationException(); } ItemTypePowerList = new System.Collections.Generic.List<int>(__json0.Count); foreach(JSONNode __e0 in __json0.Children) { int __v0;  { if(!__e0.IsNumber) { throw new SerializationException(); }  __v0 = __e0; }  ItemTypePowerList.Add(__v0); }   }
+        { var __json0 = _json["qualityPowerList"]; if(!__json0.IsArray) { throw new SerializationException(); } QualityPowerList = new System.Collections.Generic.List<int>(__json0.Count); foreach(JSONNode __e0 in __json0.Children) { int __v0;  { if(!__e0.IsNumber) { throw new SerializationException(); }  __v0 = __e0; }  QualityPowerList.Add(__v0); }   }
+        { var __json0 = _json["bannerItemList"]; if(!__json0.IsArray) { throw new SerializationException(); } BannerItemList = new System.Collections.Generic.List<banner.MainBannerItem>(__json0.Count); foreach(JSONNode __e0 in __json0.Children) { banner.MainBannerItem __v0;  { if(!__e0.IsObject) { throw new SerializationException(); }  __v0 = banner.MainBannerItem.DeserializeMainBannerItem(__e0);  }  BannerItemList.Add(__v0); }   }
         PostInit();
     }
 

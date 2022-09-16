@@ -14,7 +14,7 @@ using SimpleJSON;
 namespace cfg.banner
 {
 
-public sealed partial class MainBannerItem :  banner.basePowerItem 
+public sealed partial class MainBannerItem :  banner.BasePowerItem 
 {
     public MainBannerItem(JSONNode _json)  : base(_json) 
     {
