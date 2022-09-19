@@ -20,6 +20,7 @@ public class XiaoCaoGacha : XiaoCaoWindow
         string banId = "normal_ches";
 
         GachaCondition condition = new GachaCondition();
+        condition.SetType(GachaCondType.ItemType | GachaCondType.Quality);
 
         condition.itemType = ItemType.Weapon;
         condition.quality =  Quality.Purple;

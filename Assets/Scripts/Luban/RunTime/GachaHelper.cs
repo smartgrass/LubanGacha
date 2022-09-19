@@ -66,7 +66,7 @@ public static class GachaHelper
                 itemList = itemList.FindAll(item => condition.targetList.Contains(item.ItemId));
                 itemList = CheckCount(itemList, tmpList, GachaCondType.TargetList);
             }
-            
+
         }
         Debug.Log($"yns Count {itemList.Count}");
         getItem = itemList.GetPowerRandom();
@@ -124,13 +124,17 @@ public class GachaCondition
     public ItemType itemType;
     public List<string> targetList;
 
-
+    public void SetType(GachaCondType gachaCondType) 
+    {
+        this.gachaCondType = gachaCondType;
+    }
 
 }
 
 public enum GachaCondType : int
 {
-    Quality = 0,
-    ItemType = 1 << 0,
+    Null = 0,
+    Quality = 1<<0,
+    ItemType = 1 << 1,
     TargetList = 1 << 2
 }
