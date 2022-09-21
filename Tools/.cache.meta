@@ -1,16 +1,5 @@
 ﻿D:/UnityProject/Luban/Assets/Resources/LuaConfig/banner_tbbanner.json,E44711ECE8BFB3D634FCCF06DD82DE5,1479,1663761666000
 D:/UnityProject/Luban/Assets/Resources/LuaConfig/banner_tbbannerup.json,4F5C9999F38A20CA9A86827C953EE4E7,699,1663761666000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/Banner.cs,1035CA73C3437A5F6B83A95CCD14CE19,4082,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/BannerUp.cs,99D4505E78E2D5C91BF4863EF798AC54,3705,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/BasePowerItem.cs,60D3409C3BFBFDC7D0623A17E597B60,1553,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/ItemType.cs,47E892FC5D2DCF6017598AEE1BBF46B,587,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/MainBannerItem.cs,4CC4B2F7C0992D31ECAB7D244E3531C2,2218,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/Quality.cs,B91E138610B6D47629ACB5FD272AD1,735,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/TbBanner.cs,9721D3544189B5C3EA1A96CEA976B9D,1793,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/TbBannerUp.cs,3B32BEAFB1B514F4C341A1A4EEC9940,1819,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/UpItem.cs,519FC1A6E277981195DD7F299A3D9F4B,1958,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/banner/UpList.cs,BDC158111B9B07CF771370DE2EF26E,2032,1663761608000
-D:/UnityProject/Luban/Assets/Scripts/Config/Luban/Tables.cs,54FC71A8B026B55FF80A35F91125D,1315,1663761608000
 D:/UnityProject/Luban/Assets/Scripts/Luban/GenCode/banner/Banner.cs,1035CA73C3437A5F6B83A95CCD14CE19,4082,1663658452000
 D:/UnityProject/Luban/Assets/Scripts/Luban/GenCode/banner/BannerUp.cs,99D4505E78E2D5C91BF4863EF798AC54,3705,1663669834000
 D:/UnityProject/Luban/Assets/Scripts/Luban/GenCode/banner/BasePowerItem.cs,60D3409C3BFBFDC7D0623A17E597B60,1553,1663657794000
