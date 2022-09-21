@@ -7,7 +7,7 @@ set CONF_ROOT=%WORKSPACE%\Tools\Config
  -d %CONF_ROOT%\Defines\__root__.xml ^
  --input_data_dir %CONF_ROOT%\Datas ^
  --output_code_dir %WORKSPACE%/Assets/Scripts/Luban/GenCode ^
- --output_data_dir ..\Assets\Resources\Config\Luban ^
+ --output_data_dir ..\Assets\Resources\LuaConfig ^
  --gen_types code_cs_unity_json,data_json ^
  -s all 
 
