@@ -14,7 +14,7 @@
 
 
 	<bean name="BasePowerItem">
-		<var name="power" type="int"/>
+		<var name="power" type="float"/>
 		<bean name="MainBannerItem">
 			<var name="itemId" type="string"/>
 			<var name="itemType" type="ItemType"/>
@@ -26,20 +26,35 @@
 	<bean name="Banner">
 		<var name="id" type="string"/>
 		<var name="name" type="string"/>
-		<var name="itemTypePowerList" type="list,int"/>
+		<var name="upConfig" type="string?"/>
+		<var name="upList" type="list,string"/>
 		<var name="qualityPowerList" type="list,int"/>
 		<var name="bannerItemList" type="list,MainBannerItem"/>
 	</bean>
 
 	<table name="TbBanner" value="Banner" input="奖励池@卡池配置.xlsx"/>
 
-	<!--卡池库内容(常驻池等等)-->
-	<!-- <bean name="BannerContent">
+
+	<bean name="BannerUp">
 		<var name="id" type="string"/>
-		<var name="bannerId" type="string"/>
 		<var name="name" type="string"/>
-		<var name="bannerItemList" type="list,MainBannerItem"/>
+		<!-- <var name="upTargetRate" type="float"/> -->
+		<var name="quaUpItemMap" type="map,Quality,UpItem#sep=,"/>
+		<var name="quaUpListMap" type="map,Quality,UpList#sep=;"/>
 	</bean>
-	<table name="TbBannerContent" value="BannerContent" input="品质概率@卡池配置.xlsx"/> -->
+	
+	<!--保底触发 次数 target一般是100%  -->
+	<bean name="UpItem">
+		<var name="startTime" type="int"/>
+		<var name="endTime" type="int"/>
+		<var name="targetRate" type="float#default=1"/>
+	</bean>
+
+	<bean name="UpList">
+		<var name="upTargetRate" type="float"/>
+		<var name="list" type="list,string#sep=,"/>
+	</bean>
+
+	<table name="TbBannerUp" value="BannerUp" input="保底配置@卡池配置.xlsx"/>
 
 </module>

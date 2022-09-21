@@ -24,7 +24,7 @@ public sealed partial class MainBannerItem :  banner.BasePowerItem
         PostInit();
     }
 
-    public MainBannerItem(int power, string itemId, banner.ItemType itemType, banner.Quality quality )  : base(power) 
+    public MainBannerItem(float power, string itemId, banner.ItemType itemType, banner.Quality quality )  : base(power) 
     {
         this.ItemId = itemId;
         this.ItemType = itemType;

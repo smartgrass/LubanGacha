@@ -22,7 +22,7 @@ public abstract partial class BasePowerItem :  Bright.Config.BeanBase
         PostInit();
     }
 
-    public BasePowerItem(int power ) 
+    public BasePowerItem(float power ) 
     {
         this.Power = power;
         PostInit();
@@ -38,7 +38,7 @@ public abstract partial class BasePowerItem :  Bright.Config.BeanBase
         }
     }
 
-    public int Power { get; private set; }
+    public float Power { get; private set; }
 
 
     public virtual void Resolve(Dictionary<string, object> _tables)

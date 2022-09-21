@@ -2,16 +2,16 @@
   {
     "id": "normal_ches",
     "name": "普通宝箱池",
-    "itemTypePowerList": [
-      1,
-      1
+    "upConfig": "normal_ches",
+    "upList": [
+      "weapon1",
+      "weapon2"
     ],
     "qualityPowerList": [
-      1,
-      1,
-      1,
-      1,
-      1
+      60,
+      30,
+      8,
+      2
     ],
     "bannerItemList": [
       {
@@ -67,7 +67,8 @@
   {
     "id": "normal_ches2",
     "name": "",
-    "itemTypePowerList": [],
+    "upConfig": "",
+    "upList": [],
     "qualityPowerList": [],
     "bannerItemList": [
       {

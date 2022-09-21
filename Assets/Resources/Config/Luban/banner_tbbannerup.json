@@ -1,0 +1,44 @@
+[
+  {
+    "id": "normal_ches",
+    "name": "普通宝箱池",
+    "quaUpItemMap": [
+      [
+        2,
+        {
+          "startTime": 11,
+          "endTime": 20,
+          "targetRate": 1
+        }
+      ],
+      [
+        3,
+        {
+          "startTime": 11,
+          "endTime": 20,
+          "targetRate": 1
+        }
+      ]
+    ],
+    "quaUpListMap": [
+      [
+        2,
+        {
+          "upTargetRate": 0.5,
+          "list": [
+            "weapon1,weapon2"
+          ]
+        }
+      ],
+      [
+        3,
+        {
+          "upTargetRate": 0.5,
+          "list": [
+            "weapon1,weapon2"
+          ]
+        }
+      ]
+    ]
+  }
+]

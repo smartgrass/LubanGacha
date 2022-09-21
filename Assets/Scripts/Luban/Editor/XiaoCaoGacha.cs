@@ -1,5 +1,6 @@
 ﻿using cfg.banner;
 using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -14,21 +15,32 @@ public class XiaoCaoGacha : XiaoCaoWindow
         OpenWindow<XiaoCaoGacha>();
     }
 
+    public int GoldTime = 10;
+    public int PrupleTime = 10;
+
+    public string[] stringList;
+
     [Button]
     private void Gacha()
     {
         string banId = "normal_ches";
 
-        GachaCondition condition = new GachaCondition();
-        condition.SetType(GachaCondType.ItemType | GachaCondType.Quality);
+        Dictionary<Quality, int> QualityTimeDic = new Dictionary<Quality, int>();
+        QualityTimeDic.Add(Quality.Glod, GoldTime);
+        QualityTimeDic.Add(Quality.Purple, PrupleTime);
 
-        condition.itemType = ItemType.Weapon;
-        condition.quality =  Quality.Purple;
+        Dictionary<Quality, List<string>> upListDic = new Dictionary<Quality, List<string>>();
 
-        var getItem = GachaHelper.GetItem(banId, condition);
+        upListDic.Add(Quality.Glod,new List<string>( stringList));
 
-        getItem.ToString().LogStr();
+        if(stringList.Length == 0)
+        {
+            upListDic = null;
+        }
+
+        var gachaResult = GachaHelper.GetGacha(banId, QualityTimeDic, upListDic);
+
+
+        gachaResult.item.ToString().LogStr("get");
     }
-
-
 }
