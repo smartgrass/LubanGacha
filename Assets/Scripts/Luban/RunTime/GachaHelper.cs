@@ -15,7 +15,7 @@ public static class GachaHelper
 
     private static JSONNode TableLoader(string fileName)
     {
-        string dir = "Config/Luban";
+        string dir = "Config/LuaConfig";
         string ResourcesPath = string.Format("{0}/{1}", dir, fileName);
         //Debug.Log($"yns TableLoader ");
         //string path = string.Format("{0}/{1}.json", dir, fileName);
