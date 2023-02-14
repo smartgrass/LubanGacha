@@ -1,5 +1,6 @@
 ﻿using cfg;
 using cfg.banner;
+using NaughtyAttributes;
 using SimpleJSON;
 using System;
 using System.Collections.Generic;
@@ -279,6 +280,18 @@ public static class GachaHelper
         }
         Debug.LogError("yns ??? power = 0");
         return 0;
+    }
+
+    public static DropdownList<string> GetSelectValues()
+    {
+        var tb = GetTable();
+        DropdownList<string> res = new DropdownList<string>();
+        res.Add("-", "");
+        foreach (var item in tb.TbBanner.DataList)
+        {
+            res.Add(item.Id, item.Id);
+        }
+        return res;
     }
 }
 

@@ -15,10 +15,23 @@ public class XiaoCaoGacha : XiaoCaoWindow
         OpenWindow<XiaoCaoGacha>();
     }
 
+    [Dropdown(nameof(GetIdList))]
+    public string bannerId = "";
+
+    public DropdownList<string> GetIdList()
+    {
+        return GachaHelper.GetSelectValues();
+    }
+
+
     public int GoldTime = 10;
     public int PrupleTime = 10;
 
     public string[] stringList;
+
+    [ReadOnly]
+    [XCLabel("结果")]
+    public string resultStr;
 
     [Button]
     private void Gacha()
@@ -39,7 +52,10 @@ public class XiaoCaoGacha : XiaoCaoWindow
         }
 
         var gachaResult = GachaHelper.GetGacha(banId, QualityTimeDic, upListDic);
-
+        if (gachaResult != null)
+        {
+            resultStr = gachaResult.item.ToString();
+        }
 
         gachaResult.item.ToString().LogStr("get");
     }
