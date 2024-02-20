@@ -6,5 +6,4 @@
 
 配置表格: Tools\Config\Datas\卡池配置.xlsx
 
-核心代码
-https://github.com/smartgrass/LubanGacha/blob/main/Assets/Scripts/Luban/RunTime/GachaHelper.cs
+核心代码[GachaHelper.cs](https://github.com/smartgrass/LubanGacha/blob/main/Assets/Scripts/Luban/RunTime/GachaHelper.cs)
